@@ -1,10 +1,16 @@
 import "./App.css";
+import MainCard from "./components/MainCard";
+import SearchForm from "./components/SearchForm";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <>
-      <h1 className="font-space-mono">Test</h1>
-    </>
+    <div className="flex justify-center items-center min-h-screen bg-light-mode-light-gray font-space-mono text-custom-body">
+      <MainCard>
+        <Header />
+        <SearchForm />
+      </MainCard>
+    </div>
   );
 }
 

@@ -29,6 +29,29 @@ export default {
       },
       lineHeight: {
         "custom-line-height": "25px"
+      },
+      maxWidth: {
+        "custom-mobile": "23.438rem",
+      },
+      maxHeight: {
+        "custom-mobile": "48.563rem"
+      },
+      width: {
+        "search-input": "20.438rem",
+        "search-button": "5.25rem"
+      },
+      height: {
+        "search-input": "3.75rem",
+        "search-button": "2.875rem"
+      },
+      backgroundImage: {
+        "search-logo": "url('./src/assets/icon-search.svg')"
+      },
+      transformOrigin: {
+        "-translate-y-13": "3.375rem"
+      },
+      flexGrow: {
+        "2": "2"
       }
     },
   },
