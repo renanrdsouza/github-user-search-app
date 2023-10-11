@@ -37,12 +37,23 @@ export default {
         "custom-mobile": "48.563rem"
       },
       width: {
+        "17": "4.375rem",
         "search-input": "20.438rem",
-        "search-button": "5.25rem"
+        "search-button": "5.25rem",
+        "infos-card-mobile": "20.438"
       },
       height: {
+        "17": "4.375rem",
         "search-input": "3.75rem",
-        "search-button": "2.875rem"
+        "search-button": "2.875rem",
+        "infos-card-mobile": "32.313"
+      },
+      margin: {
+        "3.5": "1.063rem",
+        "7": "2.125rem"
+      },
+      padding: {
+        "12.5": "3.063rem"
       },
       backgroundImage: {
         "search-logo": "url('./src/assets/icon-search.svg')"
@@ -52,6 +63,9 @@ export default {
       },
       flexGrow: {
         "2": "2"
+      },
+      gap: {
+        "3": "0.813rem"
       }
     },
   },

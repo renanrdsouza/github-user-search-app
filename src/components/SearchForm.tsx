@@ -1,6 +1,6 @@
 const SearchForm = () => {
   return (
-    <form className="relative">
+    <form className="relative mb-4">
       <div className="absolute flex h-full items-center pl-3">
         <svg
           className="scale-75"

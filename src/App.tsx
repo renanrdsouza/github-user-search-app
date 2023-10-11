@@ -2,6 +2,7 @@ import "./App.css";
 import MainCard from "./components/MainCard";
 import SearchForm from "./components/SearchForm";
 import Header from "./components/Header";
+import Infos from "./components/Infos";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <MainCard>
         <Header />
         <SearchForm />
+        <Infos />
       </MainCard>
     </div>
   );
