@@ -1,7 +1,7 @@
 const SearchForm = () => {
   return (
     <form className="relative mb-4">
-      <div className="absolute flex h-full items-center pl-3">
+      <div className="absolute flex h-full items-center pl-3 md:pl-8">
         <svg
           className="scale-75"
           height="24"
@@ -17,7 +17,7 @@ const SearchForm = () => {
       <input
         type="text"
         placeholder="Search GitHub username..."
-        className="text-dark-mode-black text-right tracking-tighter w-search-input h-search-input rounded-xl shadow-lg pl-10 pr-24 placeholder:text-center placeholder:text-light-mode-gray placeholder:text-custom-h4 placeholder:tracking-tighter focus:outline-none"
+        className="text-dark-mode-black text-left tracking-tighter w-search-input h-search-input rounded-xl shadow-lg pl-10 pr-24 placeholder:text-center placeholder:text-light-mode-blue-two placeholder:text-custom-h4 placeholder:tracking-tighter md:placeholder:text-custom-h3 md:placeholder:text-left focus:outline-none md:w-search-input-desktop md:pr-28 md:pl-20"
       />
       <button className="absolute bg-light-and-dark-mode-blue-one text-white w-search-button h-search-button rounded-xl right-2 bottom-2 hover:opacity-70">
         Search

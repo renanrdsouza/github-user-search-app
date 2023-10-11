@@ -32,18 +32,23 @@ export default {
       },
       maxWidth: {
         "custom-mobile": "23.438rem",
+        "custom-desktop": "35.813rem"
       },
       maxHeight: {
-        "custom-mobile": "48.563rem"
+        "custom-mobile": "48.563rem",
+        "custom-desktop": "30.063rem"
       },
       width: {
         "17": "4.375rem",
+        "30": "7.313rem",
         "search-input": "20.438rem",
         "search-button": "5.25rem",
+        "search-input-desktop": "35.813rem",
         "infos-card-mobile": "20.438"
       },
       height: {
         "17": "4.375rem",
+        "30": "7.313rem",
         "search-input": "3.75rem",
         "search-button": "2.875rem",
         "infos-card-mobile": "32.313"

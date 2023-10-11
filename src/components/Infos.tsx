@@ -1,20 +1,20 @@
 const Infos = (props) => {
   return (
-    <div className="w-infos-card-mobile h-infos-card-mobile bg-light-mode-white pt-8 px-6 rounded-lg shadow-lg">
-      <div className="flex gap-x-5 mb-7">
+    <div className="w-infos-card-mobile h-infos-card-mobile bg-light-mode-white pt-8 px-6 rounded-lg shadow-lg md:px-10 md:pt-10">
+      <div className="flex gap-x-5 mb-7 md:gap-x-10">
         <div>
           <img
             src="https://randomuser.me/api/portraits/men/75.jpg"
             alt="Profile Image"
-            className="h-17 w-17 rounded-full"
+            className="h-17 w-17 rounded-full md:h-30 md:w-30"
           />
         </div>
-        <div className="flex flex-col h-17">
-          <h1 className="text-custom-h3 font-semibold">Fake Name</h1>
-          <a href="" className="text-light-and-dark-mode-blue-one">
+        <div className="grid h-17 justify-center md:h-30">
+          <h1 className="text-custom-h3 font-semibold md:text-custom-h1 md:self-end">Fake Name</h1>
+          <a href="" className="text-light-and-dark-mode-blue-one md:text-custom-h3">
             @fakeName
           </a>
-          <p className="text-light-mode-gray">Joined 25 Jan 2020</p>
+          <p className="text-light-mode-gray md:text-custom-h3 md:self-start">Joined 25 Jan 2020</p>
         </div>
       </div>
 
@@ -25,7 +25,7 @@ const Infos = (props) => {
         </p>
       </div>
 
-      <div className="flex justify-between bg-light-mode-light-gray rounded-lg p-4 mb-6">
+      <div className="grid grid-rows-1 grid-cols-3 justify-between bg-light-mode-light-gray rounded-lg p-4 mb-6 md:place-items-start">
         <div className="flex flex-col items-center">
           <p className="text-light-mode-gray text-custom-h4">Repos</p>
           <h3 className="font-semibold text-custom-h3">8</h3>
@@ -40,7 +40,7 @@ const Infos = (props) => {
         </div>
       </div>
 
-      <div className="flex flex-col text-custom-h4 text-light-mode-blue-two pb-12.5">
+      <div className="grid text-custom-h4 text-light-mode-blue-two pb-12.5 md:pb-10 md:grid-cols-2">
         <div className="flex gap-x-3 mb-3.5">
           <div className="w-5">
             <svg height="20" width="14" xmlns="http://www.w3.org/2000/svg">
@@ -53,7 +53,7 @@ const Infos = (props) => {
           <p>San Francisco</p>
         </div>
 
-        <div className="flex gap-x-3 mb-3.5">
+        <div className="flex gap-x-3 mb-3.5 md:order-3">
           <div className="w-5">
             <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg">
               <g fill="#4b6a9b">
@@ -77,7 +77,7 @@ const Infos = (props) => {
           <p>Not Available</p>
         </div>
 
-        <div className="flex gap-x-3 mb-3.5">
+        <div className="flex gap-x-3">
           <div className="w-5">
             <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg">
               <g fill="#4b6a9b">
