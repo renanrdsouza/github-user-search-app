@@ -22,6 +22,7 @@ export default {
       },
       fontSize: {
         "custom-h1": "26px",
+        "custom-h2.5": "18px",
         "custom-h2": "22px",
         "custom-h3": "16px",
         "custom-h4": "13px",
@@ -32,19 +33,23 @@ export default {
       },
       maxWidth: {
         "custom-mobile": "23.438rem",
-        "custom-desktop": "35.813rem"
+        "custom-tablet": "35.813rem",
+        "custom-desktop": "45.625rem"
       },
       maxHeight: {
         "custom-mobile": "48.563rem",
-        "custom-desktop": "30.063rem"
+        "custom-tablet": "30.063rem",
+        "custom-desktop": "27.75rem"
       },
       width: {
         "17": "4.375rem",
         "30": "7.313rem",
         "search-input": "20.438rem",
         "search-button": "5.25rem",
-        "search-input-desktop": "35.813rem",
-        "infos-card-mobile": "20.438"
+        "search-input-tablet": "35.813rem",
+        "search-input-desktop": "45.625rem",
+        "infos-card-mobile": "20.438",
+        "personal-infos-desktop": "30rem"
       },
       height: {
         "17": "4.375rem",
