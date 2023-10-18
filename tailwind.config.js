@@ -25,6 +25,7 @@ export default {
         "custom-h2.5": "18px",
         "custom-h2": "22px",
         "custom-h3": "16px",
+        "custom-h3.5": "15px",
         "custom-h4": "13px",
         "custom-body": "15px"
       },
@@ -76,6 +77,9 @@ export default {
       },
       gap: {
         "3": "0.813rem"
+      },
+      lineHeight: {
+        "6.5": "1.563rem"
       }
     },
   },

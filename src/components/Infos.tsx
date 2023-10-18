@@ -11,7 +11,7 @@ const Infos = () => {
           : "w-infos-card-mobile h-infos-card-mobile bg-dark-mode-dark-gray pt-8 px-6 rounded-lg shadow-lg md:px-10 md:pt-10"
       }
     >
-      <div className="flex gap-x-5 mb-7 md:gap-x-10">
+      <div className="flex gap-x-5 mb-7 md:gap-x-10 lg:-mb-6">
         <div>
           <img
             src="https://randomuser.me/api/portraits/men/75.jpg"
@@ -19,27 +19,27 @@ const Infos = () => {
             className="h-17 w-17 rounded-full md:h-30 md:w-30 lg:w-30"
           />
         </div>
-        <div className="grid h-17 justify-center md:h-30">
+        <div className="grid h-17 justify-center md:h-30 lg:grid-cols-2 lg:place-content-between lg:h-fit lg:w-personal-infos-desktop">
           <h1
             className={
               theme === "light"
                 ? "text-custom-h3 font-semibold md:text-custom-h1 lg:self-start"
-                : "text-custom-h3 text-white font-semibold md:text-custom-h1 md:self-end"
+                : "text-custom-h3 text-white font-semibold md:text-custom-h1 md:self-end lg:self-start"
             }
           >
             Fake Name
           </h1>
           <a
             href=""
-            className="text-light-and-dark-mode-blue-one md:text-custom-h3"
+            className="text-light-and-dark-mode-blue-one md:text-custom-h3 lg:order-2"
           >
             @fakeName
           </a>
           <p
             className={
               theme === "light"
-                ? "text-light-mode-gray md:text-custom-h3 md:self-start lg:justify-self-end"
-                : "text-white md:text-custom-h3 md:self-start lg:justify-self-end"
+                ? "text-light-mode-gray md:text-custom-h3 md:self-start lg:justify-self-end lg:self-center "
+                : "text-white md:text-custom-h3 md:self-start lg:justify-self-end lg:self-center "
             }
           >
             Joined 25 Jan 2020
@@ -47,12 +47,12 @@ const Infos = () => {
         </div>
       </div>
 
-      <div className="mb-6">
+      <div className="mb-6 lg:ml-40">
         <p
           className={
             theme === "light"
-              ? "text-light-mode-blue-two text-custom-h4"
-              : "text-white text-custom-h4"
+              ? "text-light-mode-blue-two text-custom-h4 md:text-custom-h3.5 lg:text-custom-h3.5 lg:w-personal-infos-desktop leading-6.5"
+              : "text-white text-custom-h4 md:text-custom-h3.5 lg:text-custom-h3.5 lg:w-personal-infos-desktop leading-6.5"
           }
         >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam,
@@ -63,8 +63,8 @@ const Infos = () => {
       <div
         className={
           theme === "light"
-            ? "grid grid-rows-1 grid-cols-3 justify-between bg-light-mode-light-gray rounded-lg py-4 px-9 mb-6 md:place-items-start"
-            : "grid grid-rows-1 grid-cols-3 justify-between text-white bg-dark-mode-black rounded-lg py-4 px-9 mb-6 md:place-items-start"
+            ? "grid grid-rows-1 grid-cols-3 justify-between bg-light-mode-light-gray rounded-lg py-4 px-9 mb-6 md:place-items-start lg:ml-40"
+            : "grid grid-rows-1 grid-cols-3 justify-between text-white bg-dark-mode-black rounded-lg py-4 px-9 mb-6 md:place-items-start lg:ml-40"
         }
       >
         <div className="flex flex-col items-start">
@@ -84,8 +84,8 @@ const Infos = () => {
       <div
         className={
           theme === "light"
-            ? "grid text-custom-h4 text-light-mode-blue-two pb-12.5 md:pb-10 md:grid-cols-2 md:text-custom-h3"
-            : "grid text-custom-h4 text-white pb-12.5 md:pb-10 md:grid-cols-2 md:text-custom-h3"
+            ? "grid text-custom-h4 text-light-mode-blue-two pb-12.5 md:pb-10 md:grid-cols-2 md:text-custom-h3 lg:ml-40"
+            : "grid text-custom-h4 text-white pb-12.5 md:pb-10 md:grid-cols-2 md:text-custom-h3 lg:ml-40"
         }
       >
         <div className="flex gap-x-3 mb-3.5">
