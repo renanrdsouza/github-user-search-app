@@ -6,7 +6,7 @@ type ThemeProviderProps = {
 
 export const ThemeContext = createContext({
   theme: "light",
-  setTheme: (theme: string) => {},
+  setTheme: (_theme: string) => {},
 });
 
 export const ThemeContextProvider = ({ children }: ThemeProviderProps) => {
