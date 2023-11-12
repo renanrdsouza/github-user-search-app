@@ -1,6 +1,11 @@
-import { useThemeContext } from "../hooks/useThemeContext";
+type UserProps = {
+  user: User;
+};
 
-const Infos = () => {
+import { useThemeContext } from "../hooks/useThemeContext";
+import { User } from "../types/User";
+
+const Infos = ({ user }: UserProps) => {
   const { theme } = useThemeContext();
 
   return (
@@ -14,7 +19,7 @@ const Infos = () => {
       <div className="flex gap-x-5 mb-7 md:gap-x-10 lg:-mb-6">
         <div>
           <img
-            src="https://randomuser.me/api/portraits/men/75.jpg"
+            src={user.avatarUrl}
             alt="Profile Image"
             className="h-17 w-17 rounded-full md:h-30 md:w-30 lg:w-30"
           />
@@ -23,17 +28,18 @@ const Infos = () => {
           <h1
             className={
               theme === "light"
-                ? "text-custom-h3 font-semibold md:text-custom-h1 lg:self-start"
+                ? "text-custom-h3 font-semibold md:text-custom-h1 md:self-end lg:self-start"
                 : "text-custom-h3 text-white font-semibold md:text-custom-h1 md:self-end lg:self-start"
             }
           >
-            Fake Name
+            {user.name??"Not Available"}
           </h1>
           <a
-            href=""
+            href={user.profileUrl}
             className="text-light-and-dark-mode-blue-one md:text-custom-h3 lg:order-2"
+            target="_blank"
           >
-            @fakeName
+            @{user.login}
           </a>
           <p
             className={
@@ -42,7 +48,7 @@ const Infos = () => {
                 : "text-white md:text-custom-h3 md:self-start lg:justify-self-end lg:self-center "
             }
           >
-            Joined 25 Jan 2020
+            {`Joined ${user.createdAt.day} ${user.createdAt.month} ${user.createdAt.year}`}
           </p>
         </div>
       </div>
@@ -69,15 +75,15 @@ const Infos = () => {
       >
         <div className="flex flex-col items-start">
           <p className="text-light-mode-gray text-custom-h4">Repos</p>
-          <h3 className="font-semibold text-custom-h2">8</h3>
+          <h3 className="font-semibold text-custom-h2">{user.repos}</h3>
         </div>
         <div className="flex flex-col items-start">
           <p className="text-light-mode-gray text-custom-h4">Followers</p>
-          <h3 className="font-semibold text-custom-h2">3938</h3>
+          <h3 className="font-semibold text-custom-h2">{user.followers}</h3>
         </div>
         <div className="flex flex-col items-start">
           <p className="text-light-mode-gray text-custom-h4">Following</p>
-          <h3 className="font-semibold text-custom-h2">9</h3>
+          <h3 className="font-semibold text-custom-h2">{user.following}</h3>
         </div>
       </div>
 
@@ -97,7 +103,7 @@ const Infos = () => {
               />
             </svg>
           </div>
-          <p>San Francisco</p>
+          <p>{user.location??"Not Available"}</p>
         </div>
 
         <div className="flex gap-x-3 mb-3.5 md:order-3">
@@ -109,8 +115,8 @@ const Infos = () => {
               </g>
             </svg>
           </div>
-          <a href="https://github.blog" target="blank">
-            https://github.blog
+          <a href={user.websiteUrl} target="blank">
+            {user.websiteUrl !== "" ? user.websiteUrl : "Not Available"}
           </a>
         </div>
 
@@ -123,7 +129,7 @@ const Infos = () => {
               />
             </svg>
           </div>
-          <p>Not Available</p>
+          <p>{user.twitterUrl??"Not Available"}</p>
         </div>
 
         <div className="flex gap-x-3">
@@ -135,7 +141,7 @@ const Infos = () => {
             </svg>
           </div>
           <a href="https://github.com" target="blank">
-            @github
+            {user.company??"Not Available"}
           </a>
         </div>
       </div>

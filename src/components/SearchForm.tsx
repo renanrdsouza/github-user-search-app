@@ -1,9 +1,13 @@
-import { useContext } from "react";
+type SearchProps = {
+  fetchData: (userName: string) => Promise<void>
+}
+
+import { useContext, useState } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
 
-
-const SearchForm = () => {
+const SearchForm = ({fetchData}: SearchProps) => {
   const { theme } = useContext(ThemeContext);
+  const [userName, setUserName] = useState("");
 
   return (
     <form className="relative mb-4">
@@ -28,13 +32,13 @@ const SearchForm = () => {
             ? "text-black text-left tracking-tighter w-search-input h-search-input rounded-xl shadow-lg pl-10 pr-24 placeholder:text-center placeholder:text-light-mode-blue-two placeholder:text-custom-h4 placeholder:tracking-tighter md:placeholder:text-custom-h2.5 md:placeholder:text-left md:text-custom-h2.5 focus:outline-none md:w-search-input-tablet md:pr-28 md:pl-20 lg:w-search-input-desktop"
             : "text-dark-mode-white text-left tracking-tighter w-search-input h-search-input rounded-xl shadow-lg pl-10 pr-24 placeholder:text-center placeholder:text-dark-mode-white bg-dark-mode-dark-gray placeholder:text-custom-h4 placeholder:tracking-tighter md:placeholder:text-custom-h2.5 md:placeholder:text-left md:text-custom-h2.5 focus:outline-none md:w-search-input-tablet md:pr-28 md:pl-20 lg:w-search-input-desktop"
         }
+        onChange={(e) => setUserName(e.target.value)}
       />
       <button
         className="absolute bg-light-and-dark-mode-blue-one font-bold text-white w-search-button h-search-button rounded-xl right-2 bottom-2 hover:opacity-70"
-        type="submit"
         onClick={(e) => {
           e.preventDefault();
-          console.log(theme);
+          fetchData(userName);
         }}
       >
         Search
