@@ -14,7 +14,7 @@ import { User } from "./types/User";
 
 function App() {
   const { theme } = useThemeContext();
-  const [user, setUser] = useState<User>();
+  const [user, setUser] = useState<User | null>(null);
 
   const fetchData = async (userName: string) => {
     let url = `https://api.github.com/users/` + userName;
@@ -28,6 +28,10 @@ function App() {
       formatedDate: date
     }
     
+    if(response.status === 404) {
+      return
+    }
+
     const user: User = {
       avatarUrl: json.avatar_url,
       name: json.name,
