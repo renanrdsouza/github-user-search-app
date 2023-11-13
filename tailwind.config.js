@@ -27,6 +27,7 @@ export default {
         "custom-h3": "16px",
         "custom-h3.5": "15px",
         "custom-h4": "13px",
+        "custom-h5": "11px",
         "custom-body": "15px"
       },
       lineHeight: {

@@ -1,7 +1,5 @@
 export type FormatedDate = {
-  year: string,
-  month: string,
-  day: string
+  formatedDate: string
 }
 
 import "./App.css";
@@ -22,10 +20,12 @@ function App() {
     let url = `https://api.github.com/users/` + userName;
     const response = await fetch(url);
     const json = await response.json();
+
+    const date = new Date(json.created_at).toLocaleString("en-us", { month: "short", year: "numeric", day:"numeric" })
+    console.log(date);
+    
     const formatedDate: FormatedDate = {
-      year: json.created_at.slice(0, 4),
-      month: json.created_at.slice(5, 7),
-      day: json.created_at.slice(8, 10),
+      formatedDate: date
     }
     
     const user: User = {

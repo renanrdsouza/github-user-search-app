@@ -48,7 +48,7 @@ const Infos = ({ user }: UserProps) => {
                 : "text-white md:text-custom-h3 md:self-start lg:justify-self-end lg:self-center "
             }
           >
-            {`Joined ${user.createdAt.day} ${user.createdAt.month} ${user.createdAt.year}`}
+            {`Joined ${user.createdAt.formatedDate}`}
           </p>
         </div>
       </div>
@@ -69,21 +69,21 @@ const Infos = ({ user }: UserProps) => {
       <div
         className={
           theme === "light"
-            ? "grid grid-rows-1 grid-cols-3 justify-between bg-light-mode-light-gray rounded-lg py-4 px-9 mb-6 md:place-items-start lg:ml-40"
-            : "grid grid-rows-1 grid-cols-3 justify-between text-white bg-dark-mode-black rounded-lg py-4 px-9 mb-6 md:place-items-start lg:ml-40"
+            ? "grid grid-rows-1 grid-cols-3 justify-between bg-light-mode-light-gray rounded-lg py-4 px-6 mb-6 md:place-items-start lg:ml-40"
+            : "grid grid-rows-1 grid-cols-3 justify-between text-white bg-dark-mode-black rounded-lg py-4 px-6 mb-6 md:place-items-start lg:ml-40"
         }
       >
         <div className="flex flex-col items-start">
-          <p className="text-light-mode-gray text-custom-h4">Repos</p>
-          <h3 className="font-semibold text-custom-h2">{user.repos}</h3>
+          <p className="text-light-mode-gray text-custom-h5 md:text-custom-h4 self-center">Repos</p>
+          <h3 className="font-semibold text-custom-h2 self-center">{user.repos}</h3>
         </div>
         <div className="flex flex-col items-start">
-          <p className="text-light-mode-gray text-custom-h4">Followers</p>
-          <h3 className="font-semibold text-custom-h2">{user.followers}</h3>
+          <p className="text-light-mode-gray text-custom-h5 md:text-custom-h4 self-center">Followers</p>
+          <h3 className="font-semibold text-custom-h2 self-center">{user.followers}</h3>
         </div>
         <div className="flex flex-col items-start">
-          <p className="text-light-mode-gray text-custom-h4">Following</p>
-          <h3 className="font-semibold text-custom-h2">{user.following}</h3>
+          <p className="text-light-mode-gray text-custom-h5 md:text-custom-h4 self-center">Following</p>
+          <h3 className="font-semibold text-custom-h2 self-center">{user.following}</h3>
         </div>
       </div>
 
@@ -115,7 +115,7 @@ const Infos = ({ user }: UserProps) => {
               </g>
             </svg>
           </div>
-          <a href={user.websiteUrl} target="blank">
+          <a href={user.websiteUrl} target="_blank">
             {user.websiteUrl !== "" ? user.websiteUrl : "Not Available"}
           </a>
         </div>
@@ -140,9 +140,7 @@ const Infos = ({ user }: UserProps) => {
               </g>
             </svg>
           </div>
-          <a href="https://github.com" target="blank">
-            {user.company??"Not Available"}
-          </a>
+          {user.company}
         </div>
       </div>
     </div>
