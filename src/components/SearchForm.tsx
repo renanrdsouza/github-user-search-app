@@ -29,7 +29,7 @@ const SearchForm = ({fetchData}: SearchProps) => {
         placeholder="Search GitHub username..."
         className={
           theme === "light"
-            ? "text-black text-left tracking-tighter w-search-input h-search-input rounded-xl shadow-lg pl-10 pr-24 placeholder:text-center placeholder:text-light-mode-blue-two placeholder:text-custom-h4 placeholder:tracking-tighter md:placeholder:text-custom-h2.5 md:placeholder:text-left md:text-custom-h2.5 focus:outline-none md:w-search-input-tablet md:pr-28 md:pl-20 lg:w-search-input-desktop"
+            ? "text-black caret-black text-left tracking-tighter w-search-input h-search-input rounded-xl shadow-lg pl-10 pr-24 placeholder:text-center placeholder:text-light-mode-blue-two placeholder:text-custom-h4 placeholder:tracking-tighter md:placeholder:text-custom-h2.5 md:placeholder:text-left md:text-custom-h2.5 focus:outline-none md:w-search-input-tablet md:pr-28 md:pl-20 lg:w-search-input-desktop"
             : "text-dark-mode-white text-left tracking-tighter w-search-input h-search-input rounded-xl shadow-lg pl-10 pr-24 placeholder:text-center placeholder:text-dark-mode-white bg-dark-mode-dark-gray placeholder:text-custom-h4 placeholder:tracking-tighter md:placeholder:text-custom-h2.5 md:placeholder:text-left md:text-custom-h2.5 focus:outline-none md:w-search-input-tablet md:pr-28 md:pl-20 lg:w-search-input-desktop"
         }
         onChange={(e) => setUserName(e.target.value)}
